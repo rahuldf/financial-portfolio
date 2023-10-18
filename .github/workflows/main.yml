@@ -1,8 +1,8 @@
 name: Scrape Stock Info
 
 on:
-  # schedule:
-  #   - cron: '0 0 1 * *'  # Run at midnight on the 1st day of each month
+  schedule:
+    - cron: '0 0 1 * *'  # Run at midnight on the 1st day of each month
   workflow_dispatch:
 
 jobs:
@@ -31,5 +31,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add bse500.csv
-        git commit -m "Updated bse500.csv with latest data as of $(date +'%Y-%m-%d')"
+        git commit -m "Updated the CSV with data as of $(date +'%Y-%m-%d')"
         git push
