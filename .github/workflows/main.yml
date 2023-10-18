@@ -1,4 +1,4 @@
-name: Monthly Stock Info
+name: Scrape Stock Info
 
 on:
   # schedule:
