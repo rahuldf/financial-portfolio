@@ -37,8 +37,6 @@ def stock_info(stock):
 
 
 stock_list = pd.read_csv("bse500_yf.csv")
-stock_list = stock_list[:10]
-
 x = stock_list['symbol'].apply(lambda x: stock_info(x))
 stock_list[['risk', 'return', 'beta', 'debtToEquity', 'grossMargins', 'ebitdaMargins', 'operatingMargins']] = list(x)
 stock_list.to_csv('bse500.csv', index=False)
